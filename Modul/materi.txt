@@ -1,0 +1,7 @@
+FITUR SASS MENERAPKAN BEBRAPA MODUL CONTOHNYA YAITU :
+
+1. Partial => Fitur penamaan file pada SASS, yang memungkinkan file tersebut dapat disertakan  pada kode file lain.Ditunjukan dengan tanda underscore"_" pada awal nama file.
+2. Import =>
+3. Use
+4. Mixin
+5. Extends

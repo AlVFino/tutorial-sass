@@ -1,0 +1,9 @@
+.hero, .about {
+  background-color: red;
+  min-height: 100vh;
+  color: #FFFFFF;
+}
+
+.about {
+  background-color: blue;
+}/*# sourceMappingURL=style.css.map */

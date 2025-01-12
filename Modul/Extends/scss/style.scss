@@ -1,0 +1,15 @@
+@mixin anjay($color : white){
+    background-color: $color;
+}
+
+.hero{
+    @include anjay(red);
+
+
+    min-height: 100vh;
+    color:#FFFFFF;
+}
+.about{
+    @extend .hero;
+    @include anjay(blue);
+}

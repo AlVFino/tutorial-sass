@@ -1,0 +1,10 @@
+// yang sangat direkomendasikan
+// Mempromosikan modularitas dan mencegah konflik nama.
+@use "../text";
+
+// tidak direkomendasikan
+// Tidak mencegah deklarasi ganda; bisa menyebabkan konflik nama (CSS yang dihasilkan berulang).
+@import "../judul";
+body{
+    background-color: aqua;
+}

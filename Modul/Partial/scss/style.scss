@@ -1,0 +1,14 @@
+@import "../ukuran";
+
+$font-stack : Helvetica, sans-serif;
+$background-color : rgb(230, 231, 233);
+
+$primary-color : blue;
+
+h1{
+    font-size: $ukuranJudul;
+    color:$primary-color;
+}
+p{
+    font-size: $ukuranParagraf;
+}
