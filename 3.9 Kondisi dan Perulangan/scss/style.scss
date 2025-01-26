@@ -1,0 +1,172 @@
+// @if coba{
+
+// }
+
+// if
+// @mixin pop-up($size, $is-faild: false){
+//     font-size: $size;
+
+//     @if $is-faild {
+//         color: red;
+//     }
+// }
+// .text-faild{
+//     @include pop-up(20px, $is-faild: true);
+// }
+
+// .text-success{
+//     @include pop-up(15px, $is-faild:false)
+// }
+
+
+// else
+// @mixin pop-up($size, $is-faild: false){
+//     font-size: $size;
+//     @if $is-faild{
+//         color: red;
+//     }@else{
+//         color: green;
+//     }
+// }
+
+// .text-faild{
+//     @include pop-up(20px, $is-faild: true);
+// }
+
+// .text-success{
+//     @include pop-up(15px, $is-faild:false)
+// }
+
+
+// else if
+// @mixin pop-up($color, $size, $position){
+//     background-color: $color;
+//     @if $position == left{
+//         padding-left: $size;
+//     }@else if $position == right{
+//         padding-right: $size;
+//     }@else {
+//         @error "Lft-rigght-only";
+//     }
+// }
+
+// .post{
+//     @include pop-up(#555, 50px, left);
+// }
+
+
+
+// Foor
+
+// $base-font-size:12px;
+
+// @for $i from 1 to 4{
+//     .text-display-#{$i}{
+//         font-size: $base-font-size * $i;
+//     }
+// }
+// @for $i from 1 through 4{
+//     .text-display-#{$i}{
+//         font-size: $base-font-size * $i;
+//     }
+// }
+
+
+// Each
+
+// $colors:red,green,blue;
+
+// @each $color in $colors{
+//     .font-#{$color}{
+//         color: $color
+//     }
+// }
+
+
+
+// Penggunaan Each Pada Maps
+
+// $type:("small": 12px, "medium":29px, "large":30px);
+
+// @each $name, $size in $type{
+//     .font-#{$name}{
+//         font-size: $size;
+//         font-family : Helvetica, sans-serif;
+//     }
+// }
+
+
+
+// penggunaan Each pada List-of-list
+
+// $font:
+//     "title" red 40px,
+//     "subtitle" grey 20px,
+//     "content" black 16px;
+
+// @each $name, $color, $size in $font{
+//     .font-#{$name}{
+//         color: $color;
+//         font-size: $size;
+//         display : inline-block;
+//         padding-top: 10px;
+//     }
+// }
+
+
+
+// While
+
+// @function scale-below($value, $base, $dev: 5){
+//     @while $value > $base {
+//         $value : $value - $dev;
+//     }
+
+//     @return $value;
+// }
+
+// $normal-font-size:30px;
+// .title{
+//     font-size:scale-below(43px, 30px);
+// }
+
+
+// implementasi penggunaan for dan while
+
+$primary-color:blue;
+$list-length: 5;
+
+.container{
+    text-align: center;
+    margin-top: 100px;
+    ul{
+        padding: 0;
+        list-style-type: 100px;
+        li{
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: $primary-color;
+        }
+    }
+}
+
+// perulangan for
+
+@for $i from 1 through $list-length{
+    #list{
+        li:nth-child(#{$i}){
+            font-size: 18px + $i;
+        }
+    }
+}
+
+// perulangan while
+$i:1;
+@while $i <=$list-lenght{
+    #list{
+        li:nth-child(#{$i}){
+            margin-left: 10px * $i;
+        }
+    }
+    $i : $i + 1;
+}
