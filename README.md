@@ -34,4 +34,13 @@ Kalau kamu tidak mau pakai terminal setiap waktu, kamu bisa gunakan ekstensi:
 
 ---
 
-Mau aku bantu buat folder struktur project-nya juga sekalian?
+ contoh struktur folder project sederhana untuk kamu yang pakai Sass + Live Sass Compiler + HTML:
+ 
+my-project/
+├── index.html
+├── css/
+│   └── style.css         ← Hasil compile dari Sass (jangan edit ini langsung)
+├── scss/
+│   └── style.scss        ← File Sass kamu (edit di sini)
+└── assets/
+    └── img/              ← Folder gambar (opsional)
